@@ -1,0 +1,8 @@
+/* style.css */
+.list-product {
+    display: block;
+  }
+  .list-product tr th,
+  .list-product tr td {
+      border-collapse: collapse;
+  }

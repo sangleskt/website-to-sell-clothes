@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+
+
+
+
+</head>
+<body>
+	<style type="text/css">
+		
+		ul {
+			margin:0;
+			padding: 0;
+			width: 200px;
+			display: inline-block;
+			background: red;
+		}
+		ul li {
+			display: block;
+			margin: 5px 0;
+
+		}
+		ul li ul.submenu {
+			margin-left: 20px;
+			display: none;
+			background: blue;
+		}
+	</style>
+	<script>
+		$(document).ready(function(){
+
+		  $("li").click(function(){
+
+		  	$(".submenu").slideUp();
+
+		  	if($(this).hasClass("active")){
+		  		$(this).find("ul").slideUp();
+		     	 $(this).removeClass("active");
+		  	} else{
+		  		 $(this).find("ul").slideDown();
+		     	 $(this).addClass("active");
+		  	}	
+		    
+		  });
+		});
+	</script>
+	<ul>
+		<li>Morbi in sem quis dui1
+
+			<ul class="submenu">
+				<li>Morbi in sem quis dui1 </li>
+				<li>Morbi in sem quis dui2 </li>
+				<li>Morbi in sem quis dui3 </li>
+				<li>Morbi in sem quis dui4 </li>
+			</ul>
+		</li>
+		<li>Morbi in sem quis dui2 
+			<ul class="submenu">
+				<li>Morbi in sem quis dui1 </li>
+				<li>Morbi in sem quis dui2 </li>
+				<li>Morbi in sem quis dui3 </li>
+				<li>Morbi in sem quis dui4 </li>
+			</ul>
+		</li>
+		<li>Morbi in sem quis dui3 </li>
+		<li>Morbi in sem quis dui4 </li>
+	</ul>
+
+</body>
+</html>

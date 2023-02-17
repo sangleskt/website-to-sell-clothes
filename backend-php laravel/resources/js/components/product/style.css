@@ -1,0 +1,13 @@
+.zoom {
+    display: none;
+    position: fixed;
+    background: #fff;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top:0;
+    text-align: center;
+}
+.zoom.show{
+    display: block
+}
